@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="JavaScript">
+        function abc() {
+            var xmlData = new ActiveXObject('microsoft.xmldom');
+            xmlData.load('XMLFile.xml');
+            var re = xmlData.documentElement;
+            var str = "";
+            for (var i = 0; i < re.childNodes.length; i++) {
+                var ch = re.childNodes(i);
+                str += "ID : " + ch.childNodes.item(0).text + "<br />Name : " + ch.childNodes.item(1).text + "<br />Address : " + ch.childNodes.item(2).text + "<br /><hr /><br />";
+            }
+            S1.innerHTML = str;
+        }
+    </script>
+</head>
+<body onload="abc();">
+    <span id="S1"></span>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javaScript">
+        function abc() {
+            var re = xmlData.documentElement;
+            var str = "";
+            for (var i = 0; i < re.childNodes.length; i++) {
+                var ch = re.childNodes(i);
+                str += "ID : " + ch.childNodes.item(0).text + "<br />Name :" + ch.childNodes.item(1).text + "<br />Address : " + ch.childNodes.item(2).text + "<br /><hr />";
+            }
+            S1.innerHTML = str;
+        }
+    </script>
+</head>
+<body onload="abc();">
+    <xml id="xmlData">
+        <root>
+            <student>
+                <id>S001</id>
+                <name>Mizan</name>
+                <address>Dhaka</address>
+            </student>
+            <student>
+                <id>S003</id>
+                <name>Rahman</name>
+                <address>Dhaka</address>
+            </student>
+            <student>
+                <id>S002</id>
+                <name>Mohammad</name>
+                <address>Dhaka</address>
+            </student>
+        </root>
+    </xml>
+    <span id="S1"></span>
+</body>
+</html>

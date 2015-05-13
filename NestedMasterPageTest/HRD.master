@@ -1,0 +1,34 @@
+﻿<%@ Master MasterPageFile="~/MasterPage.master" Language="C#" AutoEventWireup="true" CodeFile="HRD.master.cs" Inherits="HRD" %>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+         <style>
+        #banner{
+            width:1000px;
+        }
+        #menu{
+            width:1000px;
+        }
+        #divBody{
+            background-color:navy;
+            color:maroon;
+            width:1000px;
+        }
+    </style>
+    </asp:ContentPlaceHolder>
+   
+
+
+    <form id="form1" runat="server">
+        <center>
+             <div id="banner"> HRD Banner</div>
+            <div id="menu"> HRD Menu</div>
+            <div id="divBody">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </center>
+    </form>
+</body>
+

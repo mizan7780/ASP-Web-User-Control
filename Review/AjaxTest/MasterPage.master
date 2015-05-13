@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server"> 
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>       
+        <table style="width:100%;">
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TreeView ID="TreeView1" runat="server">
+                            <Nodes>
+                                <asp:TreeNode NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:TreeNode>
+                                <asp:TreeNode Text="About" Value="About"></asp:TreeNode>
+                                <asp:TreeNode Text="Admin" Value="Admin">
+                                    <asp:TreeNode NavigateUrl="~/NoticeEntryPage.aspx" Text="Notice Entry Page" Value="Notice Entry Page"></asp:TreeNode>
+                                    <asp:TreeNode NavigateUrl="~/NoticeDetails.aspx" Text="Details Notice" Value="Details Notice"></asp:TreeNode>
+                                </asp:TreeNode>
+                            </Nodes>
+                        </asp:TreeView>
+                    </td>
+                    <td>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            
+        
+        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick">
+                                </asp:Timer>
+                                <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </table>                
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <student>
+    <id>S001</id>
+    <name>Nahid</name>
+    <address>Dhaka</address>
+  </student>
+  <student>
+    <id>S002</id>
+    <name>Rahman</name>
+    <address>Dhaka</address>
+  </student>
+  <student>
+    <id>S003</id>
+    <name>Mahbub</name>
+    <address>Tangail</address>
+  </student>
+  <student>
+    <id>S004</id>
+    <name>Babu</name>
+    <address>Dhaka</address>
+  </student>
+</root>
